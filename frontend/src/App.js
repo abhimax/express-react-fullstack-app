@@ -21,8 +21,17 @@
 // BONUS: Add another (nested) layout route that adds the <EventNavigation> component above all /events... page components
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import HomePage from "./routs/HomePage";
+import EditEventPage from "./routs/EditEventPage";
+import EventDetailPage from "./routs/EventDetailPage";
+import NewEventPage from "./routs/NewEventPage";
 
-const router = createBrowserRouter([{ path: "/", element: <HomePage /> }]);
+const router = createBrowserRouter([
+  { path: "/", element: <HomePage /> },
+  { path: "/events", element: <EditEventPage /> },
+  { path: "/events:id", element: <EventDetailPage /> },
+  { path: "/events/new", element: <NewEventPage /> },
+  { path: "/events:id/edit", element: <EditEventPage /> },
+]);
 
 function App() {
   return <RouterProvider router={router} />;
