@@ -24,13 +24,20 @@ import HomePage from "./routs/HomePage";
 import EditEventPage from "./routs/EditEventPage";
 import EventDetailPage from "./routs/EventDetailPage";
 import NewEventPage from "./routs/NewEventPage";
+import RootLayout from "./routs/RootLayout";
 
 const router = createBrowserRouter([
-  { path: "/", element: <HomePage /> },
-  { path: "/events", element: <EditEventPage /> },
-  { path: "/events:id", element: <EventDetailPage /> },
-  { path: "/events/new", element: <NewEventPage /> },
-  { path: "/events:id/edit", element: <EditEventPage /> },
+  {
+    path: "/",
+    element: <RootLayout />,
+    children: [
+      { path: "/", element: <HomePage /> },
+      { path: "/events", element: <EditEventPage /> },
+      { path: "/events:id", element: <EventDetailPage /> },
+      { path: "/events/new", element: <NewEventPage /> },
+      { path: "/events:id/edit", element: <EditEventPage /> },
+    ],
+  },
 ]);
 
 function App() {
