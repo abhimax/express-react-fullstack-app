@@ -1,4 +1,10 @@
+import PageContent from "../components/PageContent";
+
 const HomePage = () => {
-  return <h1>HomePage</h1>;
+  return (
+    <PageContent title={"Home Page"}>
+      <p>Welcome to the Event App!</p>
+    </PageContent>
+  );
 };
 export default HomePage;
