@@ -2,8 +2,8 @@ import PageContent from "../components/PageContent";
 
 const HomePage = () => {
   return (
-    <PageContent title={"Home Page"}>
-      <p>Welcome to the Event App!</p>
+    <PageContent title={"Welcome"}>
+      <p>Brows all our amazing events!</p>
     </PageContent>
   );
 };
